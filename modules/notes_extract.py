@@ -193,8 +193,8 @@ def get_onsets_pianoroll_2(
             note_spectrum = CHROMA_GENERATED_CQT[note] * current_peak_height
             min_div = np.min((current_spectrum + mask_eps) / (note_spectrum + mask_eps), axis=1)
             max_idx = np.argmax(min_div)
-            # if min_div[max_idx] < threshold:
-            #     continue
+            if min_div[max_idx] < threshold:
+                continue
             note_spectrum_convolved = np.convolve(note_spectrum[max_idx], weights, mode='same')
             note_spectrum_convolved /= note_spectrum_convolved.max()
             mask_note = note_spectrum_convolved / (current_spectrum + mask_eps)
