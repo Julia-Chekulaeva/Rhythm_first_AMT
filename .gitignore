@@ -2,4 +2,6 @@
 .venv
 __pycache__
 modules/__pycache__
-
+maestro_data_from_kaggle
+FluidR3_GM.sf2
+vec2vec_model/
