@@ -6,3 +6,5 @@ maestro_data_from_kaggle
 FluidR3_GM.sf2
 vec2vec_model/X_train.npy
 vec2vec_model/y_train.npy
+vec2vec_model/X_test.npy
+vec2vec_model/y_test.npy
